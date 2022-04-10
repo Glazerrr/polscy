@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <style>
+        .main{
+            margin: auto;
+        }
+        html {
+            background-color: white;
+           
+        }
+        fieldset {
+            text-align: left;
+        }
+        p {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        legend {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .box {
+            display: none;
+        }
+     
+    </style>   
+       
+    <meta charset="utf-8"/>
+    <title> Polscy emigranci</title>
+    
+
+    <form id="mainForm" onsubmit="mainFunс()">
+        
+       
+             
+            <fieldset>
+                
+                
+                
+
+                <p><input type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="user" name="user" autocomplete="on" required autofocus></p>
+
+                <p><input type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="surname" name="surname" required></p>
+
+                <p><input type="text" placeholder="Отчество" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="secname" name="secname" required></p>
+
+                <p><input type="text" placeholder="Звание" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="rank" name="rank" required></p>
+
+                <p><input type="text" placeholder="Губерния" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="province" name="province" required></p>
+
+                <p><input type="text" placeholder="Аттестация"  pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="attistation" name="attistation" required></p>
+
+                <p><select  multiple name="marital status">
+                    <option disabled>Семейное положение</option>
+                    <option value="Женат\Замужем">Женат\Замужем</option>
+                    <option value="Не женат\Не замужем">Не женат\Не замужем</option>
+                </select></p>
+
+                <p><select  multiple name="Content from the treasury">
+                    <option disabled>Содержание от казны</option>
+                    <option value="Да">Да</option>
+                    <option value="Нет">Нет</option>
+                </select></p>
+
+                <p><input type="text" placeholder="Чин"  pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="Chin" name="Chin" required></p>
+
+
+
+            </fieldset>
+    </form>
+    </head>
+            
+     <body>       
+</body>
+</html>
