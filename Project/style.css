@@ -1,11 +1,11 @@
 body{
-    background: #ffffff ; 
+    background: #F2F2F2 ; 
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
         font-size: 200%; /* Размер шрифта */
-        border-bottom: 2px solid #bf3039; /* Параметры линии под текстом */
+        border-bottom: 2px solid #902923; /* Параметры линии под текстом */
         font-weight: normal; /* Убираем жирное начертание */
         padding-bottom: 5px; /* Расстояние от текста до линии */
 
@@ -26,14 +26,14 @@ a{
    }
         
 header { /*дополнительная колонка с текстом*/
-    background: #f2f2f2 ; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
+    background: #CCCCCC; /* Цвет фона */
+    padding: 1px; /* Поля вокруг текста */
     clear: left; /* Отменяем действие float */ 
 }
    
     
 footer { /* Нижний блок */
-    background: #808080 ; /* Цвет фона */
+    background: #CCCCCC ; /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
     clear: left; /* Отменяем действие float */
     position: absolute;
@@ -46,12 +46,12 @@ address{  text-align: right;
     color: #fff; /* Цвет текста */
     }
 fieldset
-{ background: #f2f2f2;
+{ background: #CCCCCC;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #505050;
 }
 
 .navbar a {
@@ -87,7 +87,7 @@ fieldset
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #CCCCCC;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -103,7 +103,7 @@ fieldset
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #7F7F7F;
 }
 
 .dropdown:hover .dropdown-content {
