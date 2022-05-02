@@ -2,9 +2,17 @@
     $uname = filter_var(trim($_POST['uname']));
     $psw = filter_var(trim($_POST['psw']));
 
-    $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
-
-    $result = $mysql->query("SELECT * FROM 'users' WHERE 'uname' = '$uname' AND 'psw' = '$psw'");
+    $servername = "localhost";
+    $database = "druzhini";
+    $username = "druzhini";
+    $password = "fa3Aphie";
+    // Создаем соединение
+    $mysql = mysqli_connect($servername, $username, $password, $database);
+    if (!$mysql) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully<br/>";
+    $result = $mysql->query("SELECT * FROM 'tblAdmin' WHERE 'txtLogin' = '$uname' AND 'txtPassword' = '$psw'");
     $user = $result->fetch_assoc();
     if(count($user) == 0)
     {
