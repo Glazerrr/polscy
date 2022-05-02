@@ -6,7 +6,15 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="style2.css" type="text/css"/>
     <style>
-  
+  .btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+    background-color: #902923;
+}
+.btn:hover {background: #da190b;}
     </style>   
        
     <meta charset="utf-8"/>
@@ -68,7 +76,7 @@
 
                 <input type="text" placeholder="Где учрежден надзор" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="nadzor" name="nadzor" required>
 
-
+                <button class="btn search">Поиск</button>
             </fieldset>
     </form>
   </div>
