@@ -36,7 +36,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="statistika.php">Статистика 1</a>
+      <a href="statistika.html">Статистика 1</a>
       <a href="#">Статистика 2</a>
       <a href="#">Статистика 3</a>
     </div>
