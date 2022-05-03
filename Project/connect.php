@@ -1,4 +1,5 @@
 <?php
+
     $user = $_POST['user'];
     $surname = $_POST['surname'];
     $secname = $_POST['secname'];
@@ -10,6 +11,7 @@
     $database = "druzhini";
     $username = "druzhini";
     $password = "fa3Aphie";
+    
     // Создаем соединение
     $conn = mysqli_connect($servername, $username, $password, $database);
     // Проверяем соединение

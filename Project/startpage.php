@@ -56,7 +56,8 @@
    
     <div id="content">
         <p></p>
-   <form id="mainForm" onsubmit="mainFunс()" action="connect.php" method="post">
+        
+   <form id="mainForm" onsubmit="mainFunс()"  method="post">
         
        
              
@@ -77,6 +78,7 @@
                 <input type="text" placeholder="Где учрежден надзор" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="nadzor" name="nadzor" >
                     <label for="prikaz">По какому приказу</label>
   <select name="prikaz" id="prikaz">
+    <option value="">-</option>
     <option value="Ф., 1 Оп. 67, ед. хр. ½, 162 листа, за 1868 год">Ф., 1 Оп. 67, ед. хр. ½, 162 листа, за 1868 год</option>
     <option value="Ф., 1 Оп. 67, ед. хр. 1/3, 138 листа, за 1864 год">Ф., 1 Оп. 67, ед. хр. 1/3, 138 листа, за 1864 год</option>
     <option value="Ф., 1 Оп. 67, ед. хр. 1/4, 105 листа, за 1872 год">Ф., 1 Оп. 67, ед. хр. 1/4, 105 листа, за 1872 год</option>
@@ -91,8 +93,16 @@
     <option value="Ф., 1 Оп. 69, ед. хр. 1/9, 78 листов, за 1900 год">Ф., 1 Оп. 69, ед. хр. 1/9, 78 листов, за 1900 год</option>    
     <option value="Ф., 1 Оп. 69, ед. хр. 1/11, 292 листов, за 1907 год">Ф., 1 Оп. 69, ед. хр. 1/11, 292 листов, за 1907 год</option>
   </select>
+  <?php
+  if(isset($_POST['button1'])) {
+      echo
+      include 'connect.php';
+  }
 
-                <button class="btn search">Поиск</button>
+?>
+  <input type="submit" name="button1"
+  class="button" value="Поиск" />
+                
             </fieldset>
     </form>
   </div>
