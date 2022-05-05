@@ -147,12 +147,12 @@ window.onclick = function(event) {
 </script>  
       
        
-    <footer style="width: 98.5%; margin:10px"> 
+    <!-- <footer style="width: 98.5%; margin:10px"> 
         <address>      
          <p style = "float: right; "> &copy; Znatoki</p> 
         </address>
     </footer>
-    
+     -->
 
 </body>
 </html> 
