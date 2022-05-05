@@ -18,14 +18,15 @@
     $result = $mysql->query("SELECT * FROM `tblAdmin` WHERE `txtLogin` = '$uname' AND `txtPassword` = '$psw'");
     
     $user = $result->fetch_assoc();
-    if(count($user) == 0)
+    if(empty($user) or count($user) == 0)
     {
         echo "Пользователь не найден";
         exit();
     }
-    setcookie('login', $uname['name'], time() + 3600, "/");
+    // print_r($user);
+    setcookie('user', $user['txtFIO'], time() + 3600, '/');
 
     $mysql->close();
     
-    header('Location: /');
+    header('Location: /~tiltevsk/polscy/Project/adminpage.php');
 ?>

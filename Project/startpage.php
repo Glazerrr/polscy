@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<?php 
+  if(isset($_COOKIE['user']) == true): {
+    header('Location: /~tiltevsk/polscy/Project/adminpage.php');}
+  else: 
+?>
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +34,7 @@
                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left: 60%; margin-top:0%;">Login</button>
             </h1>
           <div class="navbar">
-  <a href="startpage.html">Главная</a>
+  <a href="startpage.php">Главная</a>
   <div class="dropdown">
     <button class="dropbtn"> Статистика 
       <i class="fa fa-caret-down"></i>
@@ -156,3 +160,4 @@ window.onclick = function(event) {
 
 </body>
 </html> 
+<?php endif; ?>

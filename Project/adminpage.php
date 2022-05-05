@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<?php 
+  if(isset($_COOKIE['user']) == false): {
+    header('Location: /~tiltevsk/polscy/Project/startpage.php');}
+  else: 
+?>
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,17 +30,19 @@
  <header>
       <aside>
           
-          <h1> База данных польских ссыльных
-               <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left: 60%; margin-top:0%;">Login</button>
-            </h1>
+        <form action="out.php">
+          <h1> База данных польских ссыльных            
+            <button style="width:auto; margin-left: 60%; margin-top:0%;">Logout</button>            
+          </h1>
+        </form>
           <div class="navbar">
-  <a href="startpage.html">Главная</a>
+  <a href="startpage.php">Главная</a>
   <div class="dropdown">
     <button class="dropbtn"> Статистика 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="statistika.html">Статистика 1</a>
+      <a href="statistika.php">Статистика 1</a>
       <a href="#">Статистика 2</a>
       <a href="#">Статистика 3</a>
     </div>
@@ -108,31 +114,12 @@
   </div>
   <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="auth.php" method="post">
+  <form class="modal-content animate" action="out.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
       <img src="img_admin2.png" alt="Admin" class="admin">
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Логин</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Пароль</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-     
-    </div>
-  </form>
-</div>
 
 <script>
 // Get the modal
@@ -147,12 +134,14 @@ window.onclick = function(event) {
 </script>  
       
        
-    <footer style="width: 98.5%; margin:10px"> 
+    <!-- <footer style="width: 98.5%; margin:10px"> 
         <address>      
          <p style = "float: right; "> &copy; Znatoki</p> 
         </address>
-    </footer>
+    </footer> -->
     
 
 </body>
+
 </html> 
+<?php endif; ?>
