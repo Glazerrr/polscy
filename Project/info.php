@@ -13,7 +13,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "Select * from tblPolscy WHERE idPolscy LIKE '$id%'";
+$sql = "Select * from tblPolscy WHERE idPolscy = '$id%'";
 
 $info=array();
     $i=0;
