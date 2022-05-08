@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
   if(isset($_COOKIE['user']) == true): {
-    header('Location: /~tiltevsk/polscy/Project/adminpage.php');}
+    header('Location: /~petrunin/project/polscy/Project/adminpage.php');}
   else: 
 ?>
 <html lang="ru">
@@ -40,9 +40,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="statistika.php">Статистика 1</a>
-      <a href="#">Статистика 2</a>
-      <a href="#">Статистика 3</a>
+      <a href="statistika.php">Статистика</a>
     </div>
   </div> 
 </div>

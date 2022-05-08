@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
   if(isset($_COOKIE['user']) == false): {
-    header('Location: /~tiltevsk/polscy/Project/startpage.php');}
+    header('Location: /~petrunin/project/polscy/Project/startpage.php');}
   else: 
 ?>
 <html lang="ru">
@@ -81,6 +81,13 @@
 
                 <input type="text" placeholder="С какого времени под надзором" id="date" name="date" >
 
+                <input type="text" placeholder="Пол" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="sex" name="sex" >
+                <input type="text" placeholder="Чин, звание" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="chin" name="chin" >
+                <input type="text" placeholder="За что подвергнут" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="forwhat" name="forwhat" >
+                <input type="text" placeholder="Сколько получает содержание" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="dengi" name="dengi" >
+                <input type="text" placeholder="Семейное положение" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="sp" name="sp" >
+                <input type="text" placeholder="Дополнительная информация" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="dop" name="dop" >
+                <input type="text" placeholder="Поведение" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="pov" name="pov" >
                 <input type="text" placeholder="Где учрежден надзор" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="nadzor" name="nadzor" >
                     <label for="prikaz">По какому приказу</label>
   <select name="prikaz" id="prikaz">
@@ -102,12 +109,18 @@
   <?php
   if(isset($_POST['button1'])) {
       echo
-      include 'connect.php';
+      include 'adminconnect.php';
   }
+  if(isset($_POST['button2'])) {
+    echo
+    include 'adminconnect.php';
+}
 
 ?>
   <input type="submit" name="button1"
   class="button" value="Поиск" />
+  <input type="submit" name="button2"
+  class="button" value="Добавить" />
                 
             </fieldset>
     </form>

@@ -28,5 +28,5 @@
 
     $mysql->close();
     
-    header('Location: /~tiltevsk/polscy/Project/adminpage.php');
+    header('Location: /~petrunin/project/polscy/Project/adminpage.php');
 ?>
