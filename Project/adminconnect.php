@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+function delete(id) {
+    header('Location: /');
+         }
+</html>
+
 <?php
 
     $user = $_POST['user'];
@@ -19,7 +26,6 @@
     if (!$mysqli) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    
     $sql = "Select * from tblPolscy WHERE txtSurname LIKE '$surname%' AND txtName LIKE '$user%' AND txtSecondname LIKE '$secname%' AND txtFrom LIKE '$province%' AND dateTime LIKE '$date%' AND txtWhere LIKE '$nadzor%' AND txtOrder LIKE '$prikaz%'";
 
     $info=array();
@@ -55,15 +61,9 @@
             $info[11] =  $row["txtWhere"];
             echo '<td>'. $info[11] .'</td>';
             echo '<td>'. '<input type="submit" name="red" class="button" value="Редактировать" />'  .'</td>';                  
-            echo '<td>'. '<input type="submit" name="delete" class="button" value="Удалить" onclick= return delete()/>'  .'</td>';
+            echo '<td>'. '<input type="submit" name="delete" class="button" value="Удалить" onclick= return delete($info[0])/>'  .'</td>';
             echo '</tr>';  
             }
         }
         echo '</table>'; 
     ?>
-        function delete() {
-            alert("Submit button clicked!");
-            return true;
-         }
-        
-?>

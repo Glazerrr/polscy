@@ -83,8 +83,9 @@
 
                 <input type="text" placeholder="Пол" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="sex" name="sex" >
                 <input type="text" placeholder="Чин, звание" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="chin" name="chin" >
+                <input type="text" placeholder="По какому распоряжению" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="forwhat" name="rasp" >
                 <input type="text" placeholder="За что подвергнут" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="forwhat" name="forwhat" >
-                <input type="text" placeholder="Сколько получает содержание" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="dengi" name="dengi" >
+                <input type="text" placeholder="Сколько получает содержание" id="dengi" name="dengi" >
                 <input type="text" placeholder="Семейное положение" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="sp" name="sp" >
                 <input type="text" placeholder="Дополнительная информация" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="dop" name="dop" >
                 <input type="text" placeholder="Поведение" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="pov" name="pov" >
@@ -113,7 +114,7 @@
   }
   if(isset($_POST['button2'])) {
     echo
-    include 'adminconnect.php';
+    include 'adminadd.php';
 }
 
 ?>
