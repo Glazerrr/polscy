@@ -36,15 +36,6 @@
     $count=$count+1;
     
     $sql = "insert into tblPolscy(idPolscy , txtOrder, txtSurname , txtName, txtSecondname, txtSex, txtJob, txtFrom, txtDocs, txtArrest, dateTime, txtWhere, fltMoney, txtFamily, txtInfo, txtAttestation) VALUES ('$count','$prikaz','$surname','$user','$secname','$sex', '$chin', '$province', '$rasp', '$forwhat', '$date', '$nadzor', $dengi, '$sp', '$dop','$pov')";
-    echo '<table border="1">';
-    echo '<td>'. "Id" .'</td>';
-    echo '<td>'. "Приказ" .'</td>';
-    echo '<td>'. "Фамилия" .'</td>';
-    echo '<td>'. "Имя" .'</td>';
-    echo '<td>'. "Отчество" .'</td>';
-    echo '<td>'. "Губерния" .'</td>';
-    echo '<td>'. "С какого времени" .'</td>';
-    echo '<td>'. "Где учрежден надзор" .'</td>';
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {

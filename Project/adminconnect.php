@@ -1,12 +1,50 @@
-<!DOCTYPE html>
-<html>
-function delete(id) {
-    header('Location: /');
-         }
-</html>
+
+
+    <!-- // function delete($id) {
+    //     $servername = "localhost";
+    // $database = "druzhini";
+    // $username = "druzhini";
+    // $password = "fa3Aphie";
+    
+    // // Создаем соединение
+    // $conn = mysqli_connect($servername, $username, $password, $database);
+    //     $sql = "delete from tblPolscy where idPolscy = '$id'";
+        
+    //     if ($conn->query($sql) === TRUE) {
+    //         echo "New record created successfully";
+    //       } else {
+    //         echo "Error: " . $sql . "<br>" . $conn->error;
+    //       } -->
+
+
+
 
 <?php
+    function alerted() {
+        $servername = "localhost";
+        $database = "druzhini";
+        $username = "druzhini";
+        $password = "fa3Aphie";
+        $id = 55;
+        
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $database);
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        }
 
+        // sql to delete a record
+        $sql = "DELETE FROM tblPolscy WHERE idPolscy=55";
+
+        if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+        } else {
+        echo "Error deleting record: " . $conn->error;
+        }
+
+        $conn->close();
+        }
     $user = $_POST['user'];
     $surname = $_POST['surname'];
     $secname = $_POST['secname'];
@@ -60,10 +98,14 @@ function delete(id) {
             echo '<td>'. $info[10] .'</td>';
             $info[11] =  $row["txtWhere"];
             echo '<td>'. $info[11] .'</td>';
-            echo '<td>'. '<input type="submit" name="red" class="button" value="Редактировать" />'  .'</td>';                  
-            echo '<td>'. '<input type="submit" name="delete" class="button" value="Удалить" onclick= return delete($info[0])/>'  .'</td>';
+            echo '<td>'.'<a href="edit.php?type='. $info[0] .'">'. 'Редактировать' . '</a>'.'</td>';   
+            $t = 12;
+            echo '<td>'.'<a href="delete.php?type='. $info[0] .'">'. 'Удалить' . '</a>'.'</td>';
             echo '</tr>';  
             }
         }
+        
+        
         echo '</table>'; 
+        
     ?>

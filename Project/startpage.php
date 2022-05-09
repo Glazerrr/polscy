@@ -59,7 +59,7 @@
     <div id="content">
         <p></p>
         
-   <form id="mainForm" onsubmit="mainFunс()"  method="post">
+   <form id="mainForm" method="post">
         
        
              
