@@ -94,7 +94,7 @@ $info=array();
         <textarea name="attestation" cols="40" rows="5" style="resize: none;"><?php echo $info[15]; ?></textarea><br>
         <input type=submit value="Сохранить" name="save"></input>
         <?php
-if(isset($_POST['order'])) {
+if(isset($_POST['save'])) {
     $info[1] = $_POST['order'];
     $info[2] = $_POST['surname'];
     $info[3] = $_POST['name'];
@@ -134,12 +134,12 @@ if(isset($_POST['order'])) {
               } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
               }
-              echo('Значение текстового поля: ' . htmlspecialchars($_POST['order']));
-        
+              
         }
 
 ?>
         <input type=submit value="Отменить" name="cancel"></input>
+        <a href="https://kappa.cs.petrsu.ru/~petrunin/project/polscy/Project/adminpage.php">Домой</a>
         </form>
         
 
