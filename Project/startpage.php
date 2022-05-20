@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
   if(isset($_COOKIE['user']) == true): {
-    header('Location: /~petrunin/project/polscy/Project/adminpage.php');}
+    header('Location: /~tiltevsk/polscy/Project/adminpage.php');}
   else: 
 ?>
 <html lang="ru">
@@ -35,14 +35,7 @@
             </h1>
           <div class="navbar">
   <a href="startpage.php">Главная</a>
-  <div class="dropdown">
-    <button class="dropbtn"> Статистика 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
       <a href="statistika.php">Статистика</a>
-    </div>
-  </div> 
 </div>
           
          <div id="centerLayer">В данном разделе представлены документы о политической ссылке в Олонецкую губернию из окраинных губерний России с 1850-1870 года.</div>

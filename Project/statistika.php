@@ -272,20 +272,14 @@ $username = "druzhini";
  <header>
       <aside>
           
-          <h1> База данных польских ссыльных
-               <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left: 60%; margin-top:0%;">Login</button>
-            </h1>
+        <form action="out.php">
+          <h1> База данных польских ссыльных            
+            <button style="width:auto; margin-left: 60%; margin-top:0%;">Logout</button>            
+          </h1>
+        </form>
           <div class="navbar">
   <a href="startpage.php">Главная</a>
-  <div class="dropdown">
-    <button class="dropbtn"> Статистика 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="statistika.php">Статистика 1</a>
-
-    </div>
-  </div> 
+      <a href="statistika.php">Статистика</a>
 </div>
           
          <div id="centerLayer">
