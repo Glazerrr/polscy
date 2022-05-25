@@ -17,6 +17,7 @@
 
         if ($conn->query($sql) === TRUE) {
         echo "Record deleted successfully";
+        echo '<script>location.replace("adminpage.php");</script>'; exit;
         } else {
         echo "Error deleting record: " . $conn->error;
         }

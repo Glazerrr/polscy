@@ -36,11 +36,9 @@
     $count=$count+1;
     
     $sql = "insert into tblPolscy(idPolscy , txtOrder, txtSurname , txtName, txtSecondname, txtSex, txtJob, txtFrom, txtDocs, txtArrest, dateTime, txtWhere, fltMoney, txtFamily, txtInfo, txtAttestation) VALUES ('$count','$prikaz','$surname','$user','$secname','$sex', '$chin', '$province', '$rasp', '$forwhat', '$date', '$nadzor', $dengi, '$sp', '$dop','$pov')";
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
+    if ($conn->query($sql) === FALSE) {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
  
 ?>

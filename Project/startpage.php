@@ -56,22 +56,24 @@
         
        
              
-            <fieldset>
+   <fieldset>
                 
 
-                <p><input type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="user" name="user" autocomplete="on"  autofocus>
-
+                <p><label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Имя</label>
+                  <input type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="user" name="user" autocomplete="on"  autofocus>
+                  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Фамилия</label>
                 <input type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="surname" name="surname" >
-
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Отчество</label>
                 <input type="text" placeholder="Отчество" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="secname" name="secname" >
 
-
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Губерния</label>
                 <input type="text" placeholder="Губерния" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="province" name="province" >
-
-                <input type="text" placeholder="С какого времени под надзором" id="date" name="date" >
-
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">С какого времени под надзором</label>
+                <input type="text" placeholder="С какого времени под надзором" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" id="date" name="date" title="ГГГГ-ММ-ДД">
+               
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Где учрежден надзор</label>
                 <input type="text" placeholder="Где учрежден надзор" pattern="[A-Za-zА-Яа-яЁё]{2,30}" id="nadzor" name="nadzor" >
-                    <label for="prikaz">По какому приказу</label>
+                    <label for="prikaz">По какому приказу</label><p></p>
   <select name="prikaz" id="prikaz">
     <option value="">-</option>
     <option value="Ф., 1 Оп. 67, ед. хр. ½, 162 листа, за 1868 год">Ф., 1 Оп. 67, ед. хр. ½, 162 листа, за 1868 год</option>
@@ -87,7 +89,9 @@
     <option value="Ф., 1 Оп. 69, ед. хр. 1/8, 76 листов, за 1898 год">Ф., 1 Оп. 69, ед. хр. 1/8, 76 листов, за 1898 год</option>
     <option value="Ф., 1 Оп. 69, ед. хр. 1/9, 78 листов, за 1900 год">Ф., 1 Оп. 69, ед. хр. 1/9, 78 листов, за 1900 год</option>    
     <option value="Ф., 1 Оп. 69, ед. хр. 1/11, 292 листов, за 1907 год">Ф., 1 Оп. 69, ед. хр. 1/11, 292 листов, за 1907 год</option>
+
   </select>
+  <p></p>
   <?php
   if(isset($_POST['button1'])) {
       echo

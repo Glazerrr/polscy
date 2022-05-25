@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<?php 
-  if(isset($_COOKIE['user']) == true): {
-    header('Location: /~petrunin/project/polscy/Project/adminpage.php');}
-  else: 
-?>
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +18,10 @@
        
     <meta charset="utf-8"/>
     <title>Польские ссыльные</title>
+    <h1> База данных польских ссыльных
+
+               
+            </h1>
     </head>
 
    
@@ -30,9 +29,7 @@
  <header>
       <aside>
           
-          <h1> База данных польских ссыльных
-               <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left: 60%; margin-top:0%;">Login</button>
-            </h1>
+          
           <div class="navbar">
   <a href="startpage.php">Главная</a>
       <a href="statistika.php">Статистика</a>
@@ -196,4 +193,3 @@ window.onclick = function(event) {
 
 </body>
 </html> 
-<?php endif; ?>
