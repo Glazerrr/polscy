@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
   if(isset($_COOKIE['user']) == false): {
-    header('Location: /~tiltevsk/polscy/Project/startpage.php');}
+    header('Location: /~petrunin/project/polscy/Project/startpage.php');}
   else: 
 ?>
 <html lang="ru">

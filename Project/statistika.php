@@ -149,6 +149,7 @@ $username = "druzhini";
       google.charts.load('current', {'packages':['corechart']});
 
       // Set a callback to run when the Google Visualization API is loaded.
+
       google.charts.setOnLoadCallback(drawChart1);
       google.charts.setOnLoadCallback(drawChart2);
       google.charts.setOnLoadCallback(drawChart3);
@@ -272,69 +273,37 @@ $username = "druzhini";
  <header>
       <aside>
           
-        <form action="out.php">
-          <h1> База данных польских ссыльных            
-            <button style="width:auto; margin-left: 60%; margin-top:0%;">Logout</button>            
-          </h1>
+        <form>
+        <h1> База данных польских ссыльных
+              
+            </h1>
         </form>
           <div class="navbar">
   <a href="startpage.php">Главная</a>
       <a href="statistika.php">Статистика</a>
 </div>
-          
-         <div id="centerLayer">
-    Статистика высчитывает: пол, социальный класс(дворянство, рабочий и т.д), семейное положение, откуда родом, по какому распоряжению и за что подвергнут надзору, с какого времени состоит под надзором, где учрежден надзор,получает ли от казны содержание и сколько, количество приговоренных по годам</div>
+<div id="content">
+        <p></p>
+        
+   <form id="mainForm" method="post">
+
+        <fieldset>
+        
     <div id="chart_div"></div>
     <div id="chart2_div"></div>
     <div id="chart3_div"></div>
     <div id="chart4_div"></div>
     <div id="chart5_div"></div>
-    
+        </fieldset>
+        </form>
+        </div>
       </aside>
     </header>
     
  <!-- <p class="fig"><img src="di.png" 
    width="1090" height="800" alt="Фотография"></p> -->
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-      <img src="img_admin2.png" alt="Admin" class="admin">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Логин</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Пароль</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Запомнить <a href="#">пароль?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+ 
 </body>
 </html>
 
